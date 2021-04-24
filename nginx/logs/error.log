@@ -1,0 +1,2 @@
+2021/04/24 12:41:14 [error] 7100#6856: *9 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "POST /auth/delete_user HTTP/1.1", upstream: "http://127.0.0.1:10300/auth/delete_user", host: "127.0.0.1"
+2021/04/24 12:45:23 [error] 7100#6856: *11 upstream prematurely closed connection while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "POST /auth/delete_user HTTP/1.1", upstream: "http://127.0.0.1:10300/auth/delete_user", host: "127.0.0.1"

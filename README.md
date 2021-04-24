@@ -1,3 +1,11 @@
+### 运行注意事项
+
+1、下载spacesetup文件，主要提供数据库
+
+2、下载redis、nginx文件夹，分别运行文件夹下的install.cmd
+
+3、安装运行之前断开杀毒软件，尽量以管理员权限运行。
+
 ### 登录
 
 | 接口地址             | 请求类型 | 修改人 | 修改时间   | 备注 |
@@ -47,7 +55,7 @@ user_disabled,用户未激活
 
 ```json
 {
-    account:string
+    guid:string
 }
 ```
 
@@ -68,9 +76,9 @@ msg:
 
 ### 编辑用户
 
-| 接口地址                  | 请求类型 | 修改人 | 修改时间   | 备注 |
-| ------------------------- | -------- | ------ | ---------- | ---- |
-| /auth/post_edit_user_info | POST     | gcl    | 2021-04-23 |      |
+| 接口地址             | 请求类型 | 修改人 | 修改时间   | 备注 |
+| -------------------- | -------- | ------ | ---------- | ---- |
+| /auth/edit_user_info | POST     | gcl    | 2021-04-23 |      |
 
 #### 请求
 
@@ -78,7 +86,7 @@ msg:
 
 ```
 {
-    	"account":string,//账户
+    	"guid":string,//必须要有
         "nick_name": string,
         "password": string,
         "avartUrl": string,//用户头像
@@ -128,7 +136,7 @@ msg:
 
 ```
 {
-    account:string,
+    guid:string,
 }
 ```
 
@@ -139,7 +147,7 @@ msg:
     "code": string,200 is ok
     "msg":string,
     "data":{
-        "account":string,//必须要有
+        "guid":string,//必须要有
         "nick_name": string,
         "password": string,
         "avartUrl": string,//用户头像
@@ -180,7 +188,7 @@ login_timeout,
 
 ```
 {
-	"account":string,
+	"guid":string,
 	"old_password":string
     "new_password": string
 }
@@ -206,7 +214,7 @@ login_timeout,
 
 ```
 {
-	"account":string
+	"guid":string
 }
 note:调用其他接口重置自动退出时间，调用其他接口如果token已经过期，返回过期标志
 ```
